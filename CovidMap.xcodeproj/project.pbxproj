@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		EB6A314125D3FE5000AD530E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A314025D3FE5000AD530E /* AppDelegate.swift */; };
 		EB6A314325D3FE5000AD530E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A314225D3FE5000AD530E /* SceneDelegate.swift */; };
-		EB6A314525D3FE5000AD530E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A314425D3FE5000AD530E /* ViewController.swift */; };
+		EB6A314525D3FE5000AD530E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A314425D3FE5000AD530E /* MapViewController.swift */; };
 		EB6A314825D3FE5000AD530E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A314625D3FE5000AD530E /* Main.storyboard */; };
 		EB6A314A25D3FE5200AD530E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB6A314925D3FE5200AD530E /* Assets.xcassets */; };
 		EB6A314D25D3FE5200AD530E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A314B25D3FE5200AD530E /* LaunchScreen.storyboard */; };
+		EB6A315925D4073B00AD530E /* CovidInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A315825D4073B00AD530E /* CovidInfoViewController.swift */; };
+		EB6A316325D4158C00AD530E /* CovidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A316225D4158C00AD530E /* CovidManager.swift */; };
+		EB6A316625D4180700AD530E /* CovidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A316525D4180700AD530E /* CovidModel.swift */; };
+		EB6A316925D418CE00AD530E /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A316825D418CE00AD530E /* CovidData.swift */; };
+		EB6A316C25D4236100AD530E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A316B25D4236100AD530E /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB6A313D25D3FE5000AD530E /* CovidMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6A314025D3FE5000AD530E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB6A314225D3FE5000AD530E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EB6A314425D3FE5000AD530E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB6A314425D3FE5000AD530E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EB6A314725D3FE5000AD530E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB6A314925D3FE5200AD530E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB6A314C25D3FE5200AD530E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB6A314E25D3FE5200AD530E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB6A315825D4073B00AD530E /* CovidInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidInfoViewController.swift; sourceTree = "<group>"; };
+		EB6A316225D4158C00AD530E /* CovidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidManager.swift; sourceTree = "<group>"; };
+		EB6A316525D4180700AD530E /* CovidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidModel.swift; sourceTree = "<group>"; };
+		EB6A316825D418CE00AD530E /* CovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidData.swift; sourceTree = "<group>"; };
+		EB6A316B25D4236100AD530E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,50 @@
 			children = (
 				EB6A314025D3FE5000AD530E /* AppDelegate.swift */,
 				EB6A314225D3FE5000AD530E /* SceneDelegate.swift */,
-				EB6A314425D3FE5000AD530E /* ViewController.swift */,
-				EB6A314625D3FE5000AD530E /* Main.storyboard */,
-				EB6A314925D3FE5200AD530E /* Assets.xcassets */,
-				EB6A314B25D3FE5200AD530E /* LaunchScreen.storyboard */,
+				EB6A315F25D4145B00AD530E /* Model */,
+				EB6A315E25D4142300AD530E /* View */,
+				EB6A315B25D4140E00AD530E /* Controllers */,
+				EB6A316025D4147100AD530E /* SupportingFiles */,
 				EB6A314E25D3FE5200AD530E /* Info.plist */,
+				EB6A316B25D4236100AD530E /* Extensions.swift */,
 			);
 			path = CovidMap;
+			sourceTree = "<group>";
+		};
+		EB6A315B25D4140E00AD530E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB6A314425D3FE5000AD530E /* MapViewController.swift */,
+				EB6A315825D4073B00AD530E /* CovidInfoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EB6A315E25D4142300AD530E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB6A314625D3FE5000AD530E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB6A315F25D4145B00AD530E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB6A316225D4158C00AD530E /* CovidManager.swift */,
+				EB6A316525D4180700AD530E /* CovidModel.swift */,
+				EB6A316825D418CE00AD530E /* CovidData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB6A316025D4147100AD530E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EB6A314925D3FE5200AD530E /* Assets.xcassets */,
+				EB6A314B25D3FE5200AD530E /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB6A314525D3FE5000AD530E /* ViewController.swift in Sources */,
+				EB6A315925D4073B00AD530E /* CovidInfoViewController.swift in Sources */,
+				EB6A316925D418CE00AD530E /* CovidData.swift in Sources */,
+				EB6A316625D4180700AD530E /* CovidModel.swift in Sources */,
+				EB6A316C25D4236100AD530E /* Extensions.swift in Sources */,
+				EB6A316325D4158C00AD530E /* CovidManager.swift in Sources */,
+				EB6A314525D3FE5000AD530E /* MapViewController.swift in Sources */,
 				EB6A314125D3FE5000AD530E /* AppDelegate.swift in Sources */,
 				EB6A314325D3FE5000AD530E /* SceneDelegate.swift in Sources */,
 			);
@@ -293,7 +345,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Neo.CovidMap;
+				PRODUCT_BUNDLE_IDENTIFIER = Neo.SeeFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,7 +364,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Neo.CovidMap;
+				PRODUCT_BUNDLE_IDENTIFIER = Neo.SeeFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

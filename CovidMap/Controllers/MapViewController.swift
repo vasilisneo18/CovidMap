@@ -11,6 +11,7 @@ import MapKit
 class MapViewController: UIViewController, UIGestureRecognizerDelegate {
 
     var countryName: String?
+    var countryCode: String?
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -23,6 +24,7 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
         mapView.addGestureRecognizer(gestureRecognizer)
     }
 
+    // Function that handles the tap on the screen.
     @objc func handleTap(gestureRecognizer: UILongPressGestureRecognizer) {
         
         let touchLocation = gestureRecognizer.location(in: mapView)
@@ -31,6 +33,7 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
         let geoCoder = CLGeocoder()
         let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
 
+        //Getting country name and isoCode from coordinates
         geoCoder.reverseGeocodeLocation(location, completionHandler:
             {
                 placemarks, error -> Void in
@@ -41,11 +44,14 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
                 // Country
                 if let country = placeMark.country {
                     self.countryName = country
-
-                    print(country)
-                    self.performSegue(withIdentifier: "toCovidInfo", sender: self)
-
                 }
+                
+                //isoCode
+                if let code = placeMark.isoCountryCode {
+                    self.countryCode = code
+                    self.performSegue(withIdentifier: "toCovidInfo", sender: self)
+                }
+                
         })
     }
     
@@ -53,9 +59,11 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
         if segue.identifier == "toCovidInfo" {
             let destinationVC = segue.destination as! CovidInfoViewController
             destinationVC.countryName = countryName!
+            destinationVC.isoCode = countryCode!
         }
     }
     
     
 }
+
 
