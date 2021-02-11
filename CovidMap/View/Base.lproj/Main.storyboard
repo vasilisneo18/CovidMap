@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="CovidMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BNW-Ix-nbs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="BNW-Ix-nbs" secondAttribute="bottom" id="9L6-cg-mQx"/>
+                            <constraint firstItem="BNW-Ix-nbs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="M6d-Z9-5Dq"/>
+                            <constraint firstItem="BNW-Ix-nbs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Tku-KT-S1h"/>
+                            <constraint firstItem="BNW-Ix-nbs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zIP-Xn-p6U"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="BNW-Ix-nbs" id="WIF-Wp-GD5"/>
+                        <segue destination="kDr-OF-lqP" kind="presentation" identifier="toCovidInfo" id="EkW-fJ-tGb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1672" y="84"/>
+        </scene>
+        <!--Covid Info View Controller-->
+        <scene sceneID="bkD-sZ-vbe">
+            <objects>
+                <viewController id="kDr-OF-lqP" customClass="CovidInfoViewController" customModule="CovidMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mVY-df-rW4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="6oc-fu-HUA">
+                                <rect key="frame" x="120" y="80" width="174" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a7g-YW-Byk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6oc-fu-HUA" firstAttribute="top" secondItem="a7g-YW-Byk" secondAttribute="top" constant="80" id="LrZ-Es-9TH"/>
+                            <constraint firstItem="a7g-YW-Byk" firstAttribute="trailing" secondItem="6oc-fu-HUA" secondAttribute="trailing" constant="120" id="wem-AR-AUZ"/>
+                            <constraint firstItem="6oc-fu-HUA" firstAttribute="leading" secondItem="a7g-YW-Byk" secondAttribute="leading" constant="120" id="y4v-kE-Dwf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countryLabel" destination="6oc-fu-HUA" id="qj7-6r-XgF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJq-tJ-KQF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-642" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
